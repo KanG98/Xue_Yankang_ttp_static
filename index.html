@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<script type="text/javascript">
+
+  function display_time(){
+    var date = new Date();
+    var hour = date.getHours() % 12;
+    hour = hour == 0 ? 12 : hour;
+    var min = date.getMinutes();
+    var second = date.getSeconds();
+    document.getElementById("time").innerHTML = hour + ":" + min + ":" + second;
+  }
+  function tick(){
+    display_time()
+    window.setInterval("display_time()", 1)
+  }
+</script>
+
+<body onload=tick();>
+  <h1>My name is Yankang Xue and my favorite hobbies are cooking and coding! The current time is: <span id="time"></span></h1>
+</body>
